@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% csrf_token %}
+<head>
+	<title>User Login</title>
+	
+</head>
+<body>
+    <form action={% url 'post data' %} method='GET'>
+        {% csrf_token %}
+		<div class="login100-form-bgbtn"></div>
+								<button class="login100-form-btn">
+									Fetch Data
+								</button>
+							</div>
+                    </form>
+
+		<form action={% url 'post data' %} method='POST'>
+			{% csrf_token %}
+			<div class="login100-form-bgbtn"></div>
+									<button class="login100-form-btn">
+										Get Data
+									</button>
+								</div>
+						</form>
+                    </body>
+
+		<form action = {% url 'search data' %} method='GET'>
+
+			<div class="search">Click initialization button, it will initiate filtering, Searhing and ordering in database data
+			</div>
+			<div class="search">In triggered page, go to url just add 
+				search='word you want to search'   or  'field name in which you want to search'='text to search'  or ordering='field name'
+
+			</div>
+			<div class="search">eg:- search=female/search=35  or gender=male/age=30  or ordering=gender/ordering=age
+			</div> 
+									<button class="search">
+										Initiate Searhing/Filter/Ordering Data
+									</button>
+									
+						</form>
+                    </body>
+
+</html>
